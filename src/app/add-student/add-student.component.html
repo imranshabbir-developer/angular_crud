@@ -1,1 +1,21 @@
-<p>add-student works!</p>
+<h1>Add Student Record</h1>
+
+<form [formGroup]="student" (ngSubmit)="handleSubmit()">
+
+        <label for="rollNo">Roll No:</label>
+        <input type="number" placeholder="enter roll number.." id="rollNo" name="rollNo" formControlName="rollNo">
+        <br><br>
+        
+        <label for="studentName">Name:</label>
+        <input type="text" placeholder="enter your name.." id="studentName" name="name" formControlName="name" >
+        <br><br>
+        
+        <label for="percent">Percentage:</label>
+        <input type="text" placeholder="enter your percentage.." id="percent" name="percentage" formControlName="percentage">
+        <br><br>
+        
+        <label for="br">Branch:</label>
+        <input type="text" id="br" placeholder="enter your branch.." name="branch" formControlName="branch">
+        <br><br>
+        <button type="submit">Add Student Record</button>
+</form>
