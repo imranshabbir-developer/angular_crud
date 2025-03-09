@@ -1,1 +1,25 @@
-<p>show-student works!</p>
+<h1>List of Students</h1>
+
+<table border="1" width="70%">
+    <tr>
+        <th>Roll No.</th>
+        <th>Name</th>
+        <th>Percentage</th>
+        <th>Branch</th>
+        <th>Operations</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{ student.rollNo }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.percentage }}</td>
+            <td>{{ student.branch }}</td>
+            <td>
+                <button (click)="editStudent(student)">Edit</button>
+                <button (click)="deleteStudent(student.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>
